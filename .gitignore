@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+
+# Large data files
+data/raw/
+data/processed/*.npy
+data/processed/*.npz
+*.zip
+
+# Results and outputs
+results/
+runs/
+*.log
+
+
