@@ -11,5 +11,6 @@ data/processed/*.npz
 results/
 runs/
 *.log
+*.png
 
 
