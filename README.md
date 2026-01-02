@@ -1,2 +1,2 @@
 # GeoNetLite
-Repository to predict Geopotential height using a light U-Net based architecture
+A lightweight UNet-based emulator for short-range Z500 atmospheric flow prediction, benchmarked against persistence and climatology using ERA5 reanalysis.
