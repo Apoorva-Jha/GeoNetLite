@@ -1,0 +1,31 @@
+# GeoNetLite Training Configuration
+# Minimal, concise config for model training
+
+# Data paths
+data:
+  dataDir: "data/processed"
+
+# Training settings
+training:
+  epochs: 20
+  batchSize: 32
+  lr: 1e-3
+  lossFn: "mse"  # mse, mae, or huber
+  numWorkers: 4
+  device: "cuda"  # cuda or cpu
+
+# Model config
+model:
+  baseChannels: 32
+  useResidual: false
+
+# Optimization
+optimization:
+  seed: 42
+  patience: 5  # Early stopping patience
+  gradClip: 1.0  # Gradient clipping (0 = disabled)
+  scheduler: "cosine"  # Learning rate scheduler type
+
+# Output
+output:
+  saveDir: "runs/z500_unet"

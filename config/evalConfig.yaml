@@ -1,0 +1,27 @@
+# GeoNetLite Evaluation Configuration
+# Minimal, concise config for model evaluation
+
+# Data paths
+data:
+  dataDir: "data/processed"
+  split: "test"
+
+# Checkpoint
+checkpoint: "runs/z500_unet/checkpoint_epoch005_valloss0.0019.pt"
+  
+# Model config (matched with training)
+model:
+  baseChannels: 32
+  useResidual: false
+
+# Evaluation settings
+eval:
+  batchSize: 32
+  numWorkers: 4
+  device: "cuda"  # cuda or cpu
+  
+# Output
+output:
+  saveDir: "results/checkpoint_epoch005_valloss0.0019"
+  copyClimate: true  # Copy climatology to results for visualize.py
+  copyLatLon: true   # Copy lat/lon to results

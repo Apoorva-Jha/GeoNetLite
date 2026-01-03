@@ -4,14 +4,12 @@ from pathlib import Path
 
 import numpy as np
 import matplotlib.pyplot as plt
+import imageio.v2 as imageio
 
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 
-# python src/visualize.py \
- # --resultDir results/checkpoint_epoch009_valloss0.0019/ \
-  #--latPath data/processed/lat.npy \
-  #--lonPath data/processed/lon.npy
+# python src/visualize.py --resultDir results/checkpoint_epoch005_valloss0.0019/ --latPath data/processed/lat.npy --lonPath data/processed/lon.npy
 
 # -----------------------------
 # IO helpers
@@ -367,7 +365,6 @@ def makeForecastGif(outDir: Path, yTrue, yPred, yPers, yClim, lat, lon, startIdx
     Makes an animated GIF over indices [startIdx, endIdx).
     Uses matplotlib frames + imageio (lazy import).
     """
-    import imageio.v2 as imageio
 
     frames = []
     endIdx = min(endIdx, yTrue.shape[0])
