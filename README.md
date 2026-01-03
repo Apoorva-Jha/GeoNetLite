@@ -188,11 +188,3 @@ Run with: `jupyter notebook notebooks/01_results_overview.ipynb`
 
 Install with: `pip install -r requirements.txt`
 
-## References
-
-- ERA5 Reanalysis: Hersbach et al. (2020)
-- U-Net Architecture: Ronneberger et al. (2015)
-
-## License
-
-MIT License - See LICENSE file for details.
